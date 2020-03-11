@@ -9,7 +9,9 @@ console.error('hi');
 const init = () => {
   displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
+  $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
   darkTheme.turnDark();
+
 };
 
 init();
