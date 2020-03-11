@@ -18,7 +18,7 @@ const userMessageCardBuilder = () => {
     domString += `<span class=“time-right”>${moment().format('LLL')}</span>`;
     domString += '</div>';
     domString += '<div>';
-    domString += '<a href="#" class="btn btn-danger">Delete</a>';
+    domString += `<a href="#" id=${user.id} class="btn btn-danger delete-btn">Delete</a>`;
     domString += '</div>';
     domString += '</div>';
     domString += '</div>';
@@ -27,4 +27,13 @@ const userMessageCardBuilder = () => {
   utils.printToDom('message-display', domString);
 };
 
-export default { userMessageCardBuilder };
+const deleteMessage = (e) => {
+  const userId = e.target.id;
+  const users = messageData.getUserMessages();
+  const targetUser = users.findIndex((x) => x.id === userId);
+  console.error(users[targetUser].messageContent);
+  users.splice(targetUser, 1);
+  userMessageCardBuilder();
+};
+
+export default { userMessageCardBuilder, deleteMessage };
