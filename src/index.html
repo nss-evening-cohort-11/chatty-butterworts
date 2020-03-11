@@ -7,8 +7,86 @@
   <title>Test</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="accordion">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <button class="btn btn-success" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Chat!
+      </button>
+    </li>
+    <li class="nav-item dropdown">
+      
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      
+    </li>
+  </ul>
+</nav>
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+  <div class="card-body">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select User</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="xavier">
+              <label class="form-check-label" for="exampleRadios1">
+                Xavier
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="joanna">
+              <label class="form-check-label" for="exampleRadios2">
+                Joanna
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="gunter">
+              <label class="form-check-label" for="exampleRadios3">
+                Gunter
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="sven">
+              <label class="form-check-label" for="exampleRadios4">
+                Sven
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="mackenzie">
+              <label class="form-check-label" for="exampleRadios5">
+                Mackenzie
+              </label>
+            </div>
+          </a>
+        </div>
+      </div>
+      <textarea class="form-control" aria-label="With textarea"></textarea>
+      <div class="input-group-append">
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </div>
+    </div> 
+  </div>
+</div>
+</div>
+</div>
 
   <div id="message-display"></div>
-  
+ 
+
+
+
 </body>
 </html>
