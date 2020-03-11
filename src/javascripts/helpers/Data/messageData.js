@@ -44,14 +44,14 @@ const userMessages = [
   },
 ];
 
-let selectedMessageContent = '';
+// let selectedMessageContent = '';
 
-const setUserMessages = (messageContent) => {
-  selectedMessageContent = messageContent;
-  console.error('selectedMessageContent', selectedMessageContent);
-};
+// const setUserMessages = (messageContent) => {
+//   selectedMessageContent = messageContent;
+//   console.error('selectedMessageContent', selectedMessageContent);
+// };
 
 const getUserMessages = () => userMessages;
 
 
-export default { getUserMessages, setUserMessages };
+export default { getUserMessages };
