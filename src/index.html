@@ -7,29 +7,24 @@
   <title>Test</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-md navbar-light bg-light justify-content-between">
+  <a class="navbar-brand" href="#">Textual Healing</a>
   <div id="accordion">
-  <ul class="navbar-nav mr-auto">
+  <ul class="navbar-nav mr-auto ml-4 mr-4">
     <li class="nav-item">
-      <button class="btn btn-success" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="btn btn-success btn-lg" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Chat!
       </button>
     </li>
-    <li class="nav-item dropdown">
-      
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="nav-item dropdown ml-4 mr-4">
+        <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Options
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#"><button type="button" id="large-text" class="btn btn-info"> Large Text </button></a>
+          <a class="dropdown-item" href="#"><button type="button" id="dark-mode" class="btn btn-dark">Dark Mode</button></a>
+          <a class="dropdown-item" href="#"><button type="button" id="clear-chat" class="btn btn-danger"> Clear Chat </button></a>
         </div>
-      
     </li>
   </ul>
 </nav>
@@ -41,31 +36,31 @@
         <div class="dropdown-menu">
           <a class="dropdown-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="xavier-radio" value="xavier">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="xavier">
               <label class="form-check-label" for="exampleRadios1">
                 Xavier
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="joanna-radio" value="joanna">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="joanna">
               <label class="form-check-label" for="exampleRadios2">
                 Joanna
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="gunter-radio" value="gunter">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="gunter">
               <label class="form-check-label" for="exampleRadios3">
                 Gunter
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="sven-radio" value="sven">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="sven">
               <label class="form-check-label" for="exampleRadios4">
                 Sven
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="mackenzie-radio" value="mackenzie">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="mackenzie">
               <label class="form-check-label" for="exampleRadios5">
                 Mackenzie
               </label>
@@ -73,9 +68,9 @@
           </a>
         </div>
       </div>
-      <textarea id="message-content" class="form-control" aria-label="With textarea"></textarea>
+      <textarea class="form-control" id="message-content" aria-label="With textarea"></textarea>
       <div class="input-group-append">
-        <input class="btn btn-primary" type="submit" value="Submit" id="new-text-btn">
+        <input class="btn btn-primary" type="submit" value="Submit">
       </div>
     </div> 
   </div>
