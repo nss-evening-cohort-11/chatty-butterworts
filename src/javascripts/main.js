@@ -8,7 +8,7 @@ console.error('hi');
 const init = () => {
   displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
-  $('body').on('click', '.delete-btn', messageData.deleteMessage);
+  $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
 };
 
 init();

@@ -44,14 +44,6 @@ const userMessages = [
   },
 ];
 
-const deleteMessage = (e) => {
-  const userId = e.target.id;
-  const targetUser = userMessages.findIndex((x) => x.id === userId);
-  console.error(userMessages[targetUser].messageContent);
-  userMessages[targetUser].messageContent = '';
-};
-
-
 // let selectedMessageContent = '';
 
 // const setUserMessages = (messageContent) => {
@@ -62,4 +54,4 @@ const deleteMessage = (e) => {
 const getUserMessages = () => userMessages;
 
 
-export default { getUserMessages, deleteMessage };
+export default { getUserMessages };
