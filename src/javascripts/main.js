@@ -1,3 +1,11 @@
+import 'bootstrap';
 import '../styles/main.scss';
+import messageData from './helpers/Data/messageData';
 
-console.error('hi');
+
+const init = () => {
+  messageData.setUserMessages();
+};
+
+
+init();
