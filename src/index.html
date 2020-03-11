@@ -17,16 +17,29 @@
     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
       Chat!
     </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </ul>
 </nav>
 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
   <div class="card-body">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text">Say Something!</span>
+        <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select User</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item">Xavier <input type="checkbox" checked="" class="xavier-radio"></a>
+          <a class="dropdown-item">Joanna <input type="checkbox" class="joanna-radio"></a>
+          <a class="dropdown-item">Gunter <input type="checkbox" class="gunter-radio"></a>
+          <a class="dropdown-item">Sven <input type="checkbox" class="sven-radio"></a>
+          <a class="dropdown-item">Mackenzie <input type="checkbox" class="mackenzie-radio"></a>
+        </div>
       </div>
       <textarea class="form-control" aria-label="With textarea"></textarea>
-    </div>
+      <div class="input-group-append">
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </div>
+    </div> 
   </div>
 </div>
 </div>
