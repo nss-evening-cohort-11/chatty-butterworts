@@ -1,4 +1,5 @@
 import utils from '../helpers/utils';
+import messageData from '../helpers/Data/messageData';
 
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
@@ -12,7 +13,7 @@ const userMessageCardBuilder = () => {
   domString += '<div class="card-body">';
   domString += `<h5 class="card-title">${users.name}</h5>`;
   domString += `<p class="card-text">${users.messageContent}</p>`;
-  domString += `<p class="card-text"><small class="text-muted">${users.timeStamp}</small></p>`
+  domString += `<p class="card-text"><small class="text-muted">${users.timeStamp}</small></p>`;
   domString += '</div>';
   domString += '<div>';
   domString += '<a href="#" class="btn btn-danger">Delete</a>';
