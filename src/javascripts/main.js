@@ -7,7 +7,7 @@ console.error('hi');
 
 const init = () => {
   displayMessage.userMessageCardBuilder();
-  messageData.setUserMessages();
+  messageData.getUserMessages();
 };
 
 init();
