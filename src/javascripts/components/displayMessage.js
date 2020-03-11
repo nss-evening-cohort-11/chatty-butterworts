@@ -18,7 +18,7 @@ const userMessageCardBuilder = () => {
     domString += `<span class=“time-right”>${moment().format('LLL')}</span>`;
     domString += '</div>';
     domString += '<div>';
-    domString += '<a href="#" class="btn btn-danger">Delete</a>';
+    domString += `<a href="#" id=${user.id} class="btn btn-danger delete-btn">Delete</a>`;
     domString += '</div>';
     domString += '</div>';
     domString += '</div>';

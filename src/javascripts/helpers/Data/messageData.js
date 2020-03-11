@@ -1,6 +1,6 @@
 const userMessages = [
   {
-    id: 'user1',
+    id: 'xavier',
     userName: 'Xavier',
     userImg: 'src/img/people_0001_casual-facial-hair-fine-looking-1680317.png',
     messageContent: 'Hello World!',
@@ -8,7 +8,7 @@ const userMessages = [
 
   },
   {
-    id: 'user2',
+    id: 'joanna',
     userName: 'Joanna',
     userImg: 'src/img/people_0000_adult-afro-blur-1181519.png',
     messageContent: 'Hey boy I see you looking at me',
@@ -17,7 +17,7 @@ const userMessages = [
   },
 
   {
-    id: 'user3',
+    id: 'gunter',
     userName: 'Gunter',
     userImg: 'src/img/people_0003_adult-casual-close-up-220453.png',
     messageContent: 'I can beat you with my little finger',
@@ -26,8 +26,8 @@ const userMessages = [
   },
 
   {
-    id: 'user4',
-    userName: 'sven',
+    id: 'sven',
+    userName: 'Sven',
     userImg: 'src/img/people_0004_adult-afro-hair-bracelet-2474311.png',
     messageContent: 'Yeah Girl I see you',
     timeStamp: 'October 16, 2019 8:00pm',
@@ -35,7 +35,7 @@ const userMessages = [
   },
 
   {
-    id: 'user4',
+    id: 'mackenzie',
     userName: 'Mackenzie',
     userImg: 'src/img/people_0002_beautiful-brunette-cute-774909.png',
     messageContent: 'Just call me the cat lady!!',
@@ -43,6 +43,14 @@ const userMessages = [
 
   },
 ];
+
+const deleteMessage = (e) => {
+  const userId = e.target.id;
+  const targetUser = userMessages.findIndex((x) => x.id === userId);
+  console.error(userMessages[targetUser].messageContent);
+  userMessages[targetUser].messageContent = '';
+};
+
 
 // let selectedMessageContent = '';
 
@@ -54,4 +62,4 @@ const userMessages = [
 const getUserMessages = () => userMessages;
 
 
-export default { getUserMessages };
+export default { getUserMessages, deleteMessage };
