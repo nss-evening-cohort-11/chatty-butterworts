@@ -31,9 +31,15 @@ const deleteMessage = (e) => {
   const userId = e.target.id;
   const users = messageData.getUserMessages();
   const targetUser = users.findIndex((x) => x.id === userId);
-  console.error(users[targetUser].messageContent);
   users.splice(targetUser, 1);
   userMessageCardBuilder();
 };
 
-export default { userMessageCardBuilder, deleteMessage };
+const clearAllMessages = (e) => {
+  if (e.target.id === 'clear-chat') {
+    console.error(e.target.id);
+    $('#message-display').empty();
+  }
+};
+
+export default { userMessageCardBuilder, deleteMessage, clearAllMessages };

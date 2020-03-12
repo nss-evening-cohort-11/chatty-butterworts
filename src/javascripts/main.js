@@ -10,8 +10,10 @@ const init = () => {
   displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
   $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
+  $(document).ready(() => {
+    $(document).on('click', 'button#clear-chat', displayMessage.clearAllMessages);
+  });
   darkTheme.turnDark();
-
 };
 
 init();
