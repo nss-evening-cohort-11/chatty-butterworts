@@ -13,6 +13,9 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#clear-chat', displayMessage.clearAllMessages);
   });
+  $(document).ready(() => {
+    $(document).on('click', ':submit', messageData.getUserRadioValue);
+  });
   darkTheme.turnDark();
 };
 
