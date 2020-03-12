@@ -9,7 +9,9 @@ console.error('hi');
 const init = () => {
   displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
-  darkTheme.turnDark();
+  $(document).ready(() => {
+    $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
+  });
 };
 
 init();
