@@ -1,6 +1,7 @@
 
 const myFunction = () => {
-  $('.card {background-color}').toggle();
+  // $('.card').toggle('.dark-mode');
+  document.body.classList.add('dark-mode');
 };
 
 export default { myFunction };
