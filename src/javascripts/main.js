@@ -7,7 +7,7 @@ import darkTheme from './components/darkTheme/darkTheme';
 console.error('hi');
 
 const init = () => {
-  displayMessage.userMessageCardBuilder();
+  // displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
   $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
   $(document).ready(() => {
@@ -18,6 +18,7 @@ const init = () => {
   // });
   $(document).ready(() => {
     $(document).on('click', ':submit', messageData.setUserMessages);
+    $(document).on('click', ':submit', displayMessage.userMessageCardBuilder);
   });
   darkTheme.turnDark();
 };

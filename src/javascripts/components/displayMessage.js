@@ -6,6 +6,7 @@ const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
   let domString = '';
   users.forEach((user) => {
+    const message = messageData.printOnlyLastMessage(user);
     domString += '<div class="card mb-12">';
     domString += '<div class="row no-gutters">';
     domString += '<div class="col-md-4">';
@@ -14,7 +15,7 @@ const userMessageCardBuilder = () => {
     domString += '<div class="col-md-8">';
     domString += '<div class="card-body">';
     domString += `<h5 class="card-title">${user.userName}</h5>`;
-    domString += `<p class="card-text">${user.messageContent}</p>`;
+    domString += `<p class="card-text">${message}</p>`;
     domString += `<span class=“time-right”>${moment().format('LLL')}</span>`;
     domString += '</div>';
     domString += '<div>';
@@ -25,6 +26,7 @@ const userMessageCardBuilder = () => {
   });
   domString += '</div>';
   utils.printToDom('message-display', domString);
+  // messageData.setUserMessages();
 };
 
 const deleteMessage = (e) => {
