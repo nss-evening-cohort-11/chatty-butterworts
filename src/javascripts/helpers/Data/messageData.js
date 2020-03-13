@@ -38,8 +38,8 @@ const userMessages = [
 ];
 
 const getUserRadioValue = () => {
-  const user = $('input[name=exampleRadios]', '#user-menu').val();
-  console.error(user, 'user');
+  const user = $("input[name='exampleRadios']:checked").val();
+  return user;
 };
 
 const setUserMessages = () => {
@@ -51,6 +51,5 @@ const setUserMessages = () => {
 
 const getUserMessages = () => userMessages;
 
-$(document).toggle('dark-mode');
 
 export default { getUserMessages, setUserMessages, getUserRadioValue };
