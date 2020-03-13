@@ -37,19 +37,23 @@ const userMessages = [
   },
 ];
 
-const getUserRadioValue = () => {
-  const user = $("input[name='exampleRadios']:checked").val();
-  return user;
+const addMessageToUserArray = (userId, message) => {
+  const userMessage = userMessages[userId].messageContent;
+  $(document).ready(() => {
+    userMessage.push(message);
+  });
 };
 
 const setUserMessages = () => {
-  const message = $('textarea#message-content').checked();
-  // const userMessageContent = userMessages[userId].messageContent;
-  console.error(message);
-  // userMessageContent.push($('textarea#message-content').val());
+  const message = $('textarea#message-content').val();
+  const userId = $("input[name='exampleRadios']:checked").val();
+  console.error(userId);
+  const targetUser = userMessages.findIndex((x) => x.id === userId);
+  addMessageToUserArray(targetUser, message);
+  console.error(userMessages[targetUser].messageContent);
 };
 
 const getUserMessages = () => userMessages;
 
 
-export default { getUserMessages, setUserMessages, getUserRadioValue };
+export default { getUserMessages, setUserMessages };
