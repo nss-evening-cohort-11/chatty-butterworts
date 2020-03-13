@@ -11,14 +11,15 @@ const userMessageCardBuilder = () => {
     domString += '<div class="col-md-4">';
     domString += `<img src="${user.userImg}" class="card-img" style="max-width: 150px;" alt="Picture of me">`;
     domString += '</div>';
-    domString += '<div class="col-md-8">';
+    domString += '<div class="col-md-8 d">';
     domString += '<div class="card-body">';
-    domString += `<h5 class="card-title">${user.userName}</h5>`;
+    domString += `<h1 class="card-title">${user.userName}</h1>`;
     domString += `<p class="card-text">${user.messageContent}</p>`;
     domString += `<span class=“time-right”>${moment().format('LLL')}</span>`;
     domString += '</div>';
     domString += '<div>';
     domString += `<a href="#" id=${user.id} class="btn btn-danger delete-btn">Delete</a>`;
+    domString += '</div>';
     domString += '</div>';
     domString += '</div>';
     domString += '</div>';
