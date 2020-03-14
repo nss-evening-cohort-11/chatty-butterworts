@@ -2,11 +2,12 @@ import moment from 'moment';
 import utils from '../helpers/utils';
 import messageData from '../helpers/Data/messageData';
 
+const domArray = messageData.getDomArray;
+
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
   const userId = $("input[name='exampleRadios']:checked").val();
   let domString = '';
-
   users.forEach((user) => {
     if (userId === user.id) {
       domString += '<div class="card mb-12">';
@@ -25,13 +26,14 @@ const userMessageCardBuilder = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
+      domArray.push(domString);
+      domString = domArray.toString();
     }
   });
-
-  console.error(userId);
   domString += '</div>';
+  console.error(domArray, 'domArray');
+  console.error(domString, 'domString');
   utils.printToDom('message-display', domString);
-  // messageData.setUserMessages();
 };
 
 const deleteMessage = (e) => {

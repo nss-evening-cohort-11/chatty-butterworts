@@ -37,9 +37,13 @@ const userMessages = [
   },
 ];
 
+const domArray = [];
+
+const getDomArray = () => domArray;
+
 const addMessageToUserArray = (userId, message) => {
   const userMessage = userMessages[userId].messageContent;
-  userMessage[0] = message;
+  userMessage.unshift(message);
   return userMessage[0];
 };
 
@@ -55,4 +59,4 @@ const setUserMessages = () => {
 const getUserMessages = () => userMessages;
 
 
-export default { getUserMessages, setUserMessages };
+export default { getUserMessages, setUserMessages, getDomArray };
