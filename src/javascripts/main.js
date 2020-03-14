@@ -5,6 +5,7 @@ import messageData from './helpers/Data/messageData';
 import darkTheme from './components/darkTheme/darkTheme';
 import largeText from './components/largeText';
 
+
 console.error('hi');
 
 const init = () => {
@@ -25,6 +26,7 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
-
+  // eslint-disable-next-line no-undef
+};
 
 init();
