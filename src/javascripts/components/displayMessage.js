@@ -26,6 +26,7 @@ const userMessageCardBuilder = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
+      domString += '</div>';
       domArray.push(domString);
       domString = domArray.toString();
     }
