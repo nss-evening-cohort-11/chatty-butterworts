@@ -3,6 +3,7 @@ import '../styles/main.scss';
 import displayMessage from './components/displayMessage';
 import messageData from './helpers/Data/messageData';
 import darkTheme from './components/darkTheme/darkTheme';
+import largeText from './components/largeText';
 
 console.error('hi');
 
@@ -17,6 +18,10 @@ const init = () => {
     $(document).on('click', 'button#clear-chat', displayMessage.clearAllMessages);
   });
   darkTheme.turnDark();
+  $(document).ready(() => {
+    $(document).on('click', 'button#large-text', largeText.bigText);
+  });
+
 };
 
 init();

@@ -30,6 +30,17 @@ body  {
   border-radius: 10px;
 }
 
+
+body.regular {
+  font-size: 14px;
+}
+
+body.enlarged {
+  font-size: 60px;
+}
+
+
 .btn .btn-danger {
   margin-bottom: 3%;
 }
+
