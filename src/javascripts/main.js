@@ -13,9 +13,6 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#clear-chat', displayMessage.clearAllMessages);
   });
-  // $(document).ready(() => {
-  //   $(document).on('click', ':submit', messageData.getUserRadioValue);
-  // });
   $(document).ready(() => {
     $(document).on('click', ':submit', messageData.setUserMessages);
     $(document).on('click', ':submit', displayMessage.userMessageCardBuilder);
