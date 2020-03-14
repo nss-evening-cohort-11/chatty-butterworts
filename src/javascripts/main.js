@@ -10,14 +10,18 @@ console.error('hi');
 const init = () => {
   displayMessage.userMessageCardBuilder();
   messageData.getUserMessages();
+  $(document).ready(() => {
+    $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
+  });
   $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
+  $(document).ready(() => {
+    $(document).on('click', 'button#clear-chat', displayMessage.clearAllMessages);
+  });
   darkTheme.turnDark();
-  // largeText.largeTextButtonEvent();
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
-  // largeText.makeFontLarge();
-  // largeText.bigText();
+
 };
 
 init();

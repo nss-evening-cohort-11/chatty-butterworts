@@ -1,9 +1,35 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-body {
+
+
+body  {
   background-color: rgb(153, 153, 153);
+  color: black;
+  
 }
+
+
+
+.dark-mode .card {
+  background-color: black;
+  color: white;
+      
+}
+
+.card img {
+  border-radius: 50%;
+  width: 30%;
+  margin: 5%;
+  border: solid 2px red;
+}
+
+.card {
+  margin: 2%;
+  padding: 2%;
+  border-radius: 10px;
+}
+
 
 body.regular {
   font-size: 14px;
@@ -11,5 +37,10 @@ body.regular {
 
 body.enlarged {
   font-size: 60px;
+}
+
+
+.btn .btn-danger {
+  margin-bottom: 3%;
 }
 
