@@ -26,6 +26,5 @@ const init = () => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
 
-};
 
 init();
