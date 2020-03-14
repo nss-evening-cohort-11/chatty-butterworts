@@ -2,7 +2,7 @@ import moment from 'moment';
 import utils from '../helpers/utils';
 import messageData from '../helpers/Data/messageData';
 
-const domArray = messageData.getDomArray;
+const domArray = [];
 
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
@@ -31,9 +31,8 @@ const userMessageCardBuilder = () => {
     }
   });
   domString += '</div>';
-  console.error(domArray, 'domArray');
-  console.error(domString, 'domString');
   utils.printToDom('message-display', domString);
+  return domString;
 };
 
 const deleteMessage = (e) => {

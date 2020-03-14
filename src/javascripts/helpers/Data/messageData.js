@@ -39,8 +39,6 @@ const userMessages = [
 
 const domArray = [];
 
-const getDomArray = () => domArray;
-
 const addMessageToUserArray = (userId, message) => {
   const userMessage = userMessages[userId].messageContent;
   userMessage.unshift(message);
@@ -55,6 +53,8 @@ const setUserMessages = () => {
   addMessageToUserArray(targetUser, message);
   console.error(userMessages[targetUser].messageContent, 'actual message array');
 };
+
+const getDomArray = () => domArray;
 
 const getUserMessages = () => userMessages;
 
