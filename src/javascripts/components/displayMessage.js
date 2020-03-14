@@ -4,9 +4,11 @@ import messageData from '../helpers/Data/messageData';
 
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
+  const userId = $("input[name='exampleRadios']:checked").val();
   let domString = '';
-  if (Array.isArray(users.messageContent) && users.messageContent.length === 0) {
-    users.forEach((user) => {
+
+  users.forEach((user) => {
+    if (userId === user.id) {
       domString += '<div class="card mb-12">';
       domString += '<div class="row no-gutters">';
       domString += '<div class="col-md-4">';
@@ -23,9 +25,10 @@ const userMessageCardBuilder = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
-    });
-  }
+    }
+  });
 
+  console.error(userId);
   domString += '</div>';
   utils.printToDom('message-display', domString);
   // messageData.setUserMessages();
