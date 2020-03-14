@@ -6,7 +6,6 @@ const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
   let domString = '';
   users.forEach((user) => {
-    // const message = messageData.printOnlyLastMessage(user);
     domString += '<div class="card mb-12">';
     domString += '<div class="row no-gutters">';
     domString += '<div class="col-md-4">';
