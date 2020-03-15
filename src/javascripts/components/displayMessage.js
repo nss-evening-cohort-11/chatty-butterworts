@@ -41,10 +41,11 @@ const newMessageSetter = (e) => {
     messageContent: [$('textarea#message-content').val()],
   };
   users.push(newMessage);
-  $('div#dropdown').removeClass('.was-validated');
+  $('#form-check').removeClass('.was-validated');
   $('#collapseOne').removeClass('show');
   console.error(users);
-  userMessageCardBuilder();
+  if ($('textarea#message-content').val() !== '') userMessageCardBuilder();
+  else console.error('You have to say something!');
 };
 
 const deleteMessage = (e) => {
