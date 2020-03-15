@@ -46,21 +46,6 @@ const userMessages = [
   },
 ];
 
-// const addMessageToUserArray = (userId, message) => {
-//   const userMessage = userMessages[userId].messageContent;
-//   userMessage.unshift(message);
-//   return userMessage[0];
-// };
-//
-// const setUserMessages = () => {
-//   const message = $('textarea#message-content').val();
-//   const userId = $("input[name='exampleRadios']:checked").val();
-//   console.error(userId, 'userId');
-//   const targetUser = userMessages.findIndex((x) => x.id === userId);
-//   addMessageToUserArray(targetUser, message);
-//   console.error(userMessages[targetUser].messageContent, 'actual message array');
-// };
-
 const getUserImages = () => images;
 
 const getUserMessages = () => userMessages;
