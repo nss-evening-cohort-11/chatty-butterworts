@@ -40,12 +40,12 @@ const newMessageSetter = (e) => {
     userImg: images[userId],
     messageContent: [$('textarea#message-content').val()],
   };
-  users.push(newMessage);
+  if ($('textarea#message-content').val() !== '') {
+    users.push(newMessage);
+    userMessageCardBuilder();
+  }
   $('#form-check').removeClass('.was-validated');
   $('#collapseOne').removeClass('show');
-  console.error(users);
-  if ($('textarea#message-content').val() !== '') userMessageCardBuilder();
-  else console.error('You have to say something!');
 };
 
 const deleteMessage = (e) => {

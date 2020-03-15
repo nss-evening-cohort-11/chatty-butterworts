@@ -1,18 +1,7 @@
 
-import $ from 'jquery';
-
-const darkTheme = () => {
-  const root = $('body');
-  root.toggleClass('theme-light');
-  root.toggleClass('theme-dark');
-  // $('#app-root').toggleClass('theme-dark');
+const myFunction = () => {
+  // $('.card').toggle('.dark-mode');
+  document.body.classList.add('dark-mode');
 };
 
-const turnDark = () => {
-  // $('#darkThemeCheck').on('change', darkMode);
-  $('body').on('click', '#dark-mode', () => {
-    darkTheme();
-  });
-};
-
-export default { turnDark };
+export default { myFunction };
