@@ -3,8 +3,6 @@ import '../styles/main.scss';
 import displayMessage from './components/displayMessage';
 import darkTheme from './components/darkTheme/darkTheme';
 
-console.error('hi');
-
 const init = () => {
   displayMessage.userMessageCardBuilder();
   $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
