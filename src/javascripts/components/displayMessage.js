@@ -43,7 +43,7 @@ const dumbChatBot = () => {
   console.error(prevMessage);
   const newMessage = {
     id: 'insultbot',
-    messageId: `message-${messages.length + 1}`,
+    messageId: `message-${messages.length + 5}`,
     userName: 'INSULTBOT',
     userImg: images.chatbot,
     messageContent: [`${responses[randInt]}`],
