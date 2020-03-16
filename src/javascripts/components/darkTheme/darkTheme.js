@@ -1,7 +1,6 @@
+const myFunction = () => {
+  document.body.classList.add('dark-mode');
+  // myFunction.preventDefault();
+};
 
-// const myFunction = () => {
-//   // $('body').toggleClass('.dark-mode');
-//   // document.body.classList.add('dark-mode');
-// };
-//
-// export default { myFunction };
+export default { myFunction };
