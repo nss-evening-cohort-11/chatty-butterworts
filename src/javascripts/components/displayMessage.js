@@ -92,7 +92,6 @@ const clearAllMessages = (e) => {
   }
   return users;
 };
-
 export default {
   userMessageCardBuilder,
   deleteMessage,
