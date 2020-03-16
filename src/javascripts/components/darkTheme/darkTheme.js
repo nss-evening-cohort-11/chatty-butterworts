@@ -1,6 +1,5 @@
 const myFunction = () => {
-  document.body.classList.add('dark-mode');
-  // myFunction.preventDefault();
+  document.body.classList.toggle('dark-mode');
 };
 
 export default { myFunction };

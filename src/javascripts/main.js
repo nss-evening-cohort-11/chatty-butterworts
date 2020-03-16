@@ -4,8 +4,7 @@ import displayMessage from './components/displayMessage';
 import darkTheme from './components/darkTheme/darkTheme';
 import largeText from './components/largeText';
 
-const init = () => {
-  displayMessage.userMessageCardBuilder();
+const events = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
   });
@@ -16,10 +15,14 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', ':submit', displayMessage.newMessageSetter);
   });
-  // darkTheme.turnDark();
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
+};
+
+const init = () => {
+  displayMessage.userMessageCardBuilder();
+  events();
 };
 
 init();
