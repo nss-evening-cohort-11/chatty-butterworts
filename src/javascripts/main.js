@@ -9,8 +9,6 @@ import largeText from './components/largeText';
 console.error('hi');
 
 const init = () => {
-  // displayMessage.userMessageCardBuilder();
-  // messageData.getUserMessages();
   $(document).ready(() => {
     $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
   });
@@ -22,10 +20,13 @@ const init = () => {
     $(document).on('click', ':submit', messageData.setUserMessages);
     $(document).on('click', ':submit', displayMessage.userMessageCardBuilder);
   });
-  darkTheme.turnDark();
+  // darkTheme.turnDark();
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
+  displayMessage.userMessageCardBuilder();
+  messageData.getUserMessages();
+
   // eslint-disable-next-line no-undef
 };
 

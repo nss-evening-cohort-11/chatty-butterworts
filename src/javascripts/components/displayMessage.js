@@ -29,17 +29,17 @@ const userMessageCardBuilder = () => {
       domString += '</div>';
       domArray.push(domString);
       domString = domArray.toString();
-    }
-  });
+  };
   domString += '</div>';
   utils.printToDom('message-display', domString);
   return domString;
-};
+});
 
 const deleteMessage = (e) => {
   const userId = e.target.id;
   const users = messageData.getUserMessages();
   const targetUser = users.findIndex((x) => x.id === userId);
+  console.error('target user value', targetUser);
   users.splice(targetUser, 1);
   userMessageCardBuilder();
 };
