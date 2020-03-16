@@ -77,7 +77,7 @@ const newMessageSetter = (e) => {
 const deleteMessage = (e) => {
   const messageId = e.target.id;
   const users = messageData.getUserMessages();
-  const targetMessage = users.findIndex((x) => x.id === messageId);
+  const targetMessage = users.findIndex((x) => x.messageId === messageId);
   users.splice(targetMessage, 1);
   userMessageCardBuilder();
 };
