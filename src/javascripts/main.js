@@ -4,6 +4,7 @@ import displayMessage from './components/displayMessage';
 import darkTheme from './components/darkTheme/darkTheme';
 import largeText from './components/largeText';
 
+
 const init = () => {
   displayMessage.userMessageCardBuilder();
   $(document).ready(() => {
@@ -19,6 +20,8 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
+  displayMessage.userMessageCardBuilder();
 };
+
 
 init();
