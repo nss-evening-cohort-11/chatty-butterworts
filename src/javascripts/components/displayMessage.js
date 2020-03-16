@@ -2,6 +2,7 @@ import moment from 'moment';
 import utils from '../helpers/utils';
 import messageData from '../helpers/Data/messageData';
 
+
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
   let domString = '';
@@ -28,6 +29,31 @@ const userMessageCardBuilder = () => {
   $('#message-content').val('');
 };
 
+const dumbChatBot = () => {
+  const messages = messageData.getUserMessages();
+  const trigger = messageData.getChatBotResponseTriggers();
+  const images = messageData.getUserImages();
+  const responses = messageData.getChatBotCannedMessages();
+  const randInt = Math.ceil(Math.random() * 16);
+  const user = $("input[name='exampleRadios']:checked").val();
+  console.error(user);
+  const userId = messages.findIndex((x) => x.id === user);
+  console.error(userId);
+  const prevMessage = messages[userId].messageContent[0];
+  console.error(prevMessage);
+  const newMessage = {
+    id: 'insultbot',
+    messageId: `message-${messages.length + 1}`,
+    userName: 'INSULTBOT',
+    userImg: images.chatbot,
+    messageContent: [`${responses[randInt]}`],
+  };
+  if (trigger.includes(prevMessage)) {
+    messages.push(newMessage);
+    setTimeout(() => userMessageCardBuilder(), 1500);
+  }
+};
+
 const newMessageSetter = (e) => {
   e.preventDefault();
   const messages = messageData.getUserMessages();
@@ -46,11 +72,11 @@ const newMessageSetter = (e) => {
   }
   $('#form-check').removeClass('.was-validated');
   $('#collapseOne').removeClass('show');
+  dumbChatBot();
 };
 
 const deleteMessage = (e) => {
   const messageId = e.target.id;
-  console.error(messageId);
   const users = messageData.getUserMessages();
   const targetMessage = users.findIndex((x) => x.id === messageId);
   users.splice(targetMessage, 1);
