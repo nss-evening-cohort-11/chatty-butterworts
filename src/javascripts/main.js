@@ -4,7 +4,9 @@ import displayMessage from './components/displayMessage';
 import darkTheme from './components/darkTheme/darkTheme';
 import largeText from './components/largeText';
 
-const events = () => {
+
+const init = () => {
+  displayMessage.userMessageCardBuilder();
   $(document).ready(() => {
     $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
   });
@@ -19,15 +21,7 @@ const events = () => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
   displayMessage.userMessageCardBuilder();
-
-
-  // eslint-disable-next-line no-undef
-
 };
 
-const init = () => {
-  displayMessage.userMessageCardBuilder();
-  events();
-};
 
 init();
