@@ -28,6 +28,7 @@ const userMessageCardBuilder = () => {
   utils.printToDom('message-display', domString);
   $('#message-content').val('');
 };
+
 const dumbChatBot = () => {
   const messages = messageData.getUserMessages();
   const trigger = messageData.getChatBotResponseTriggers();
@@ -95,5 +96,4 @@ export default {
   deleteMessage,
   clearAllMessages,
   newMessageSetter,
-  dumbChatBot,
 };
