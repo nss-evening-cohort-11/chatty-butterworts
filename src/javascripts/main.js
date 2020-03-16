@@ -18,6 +18,11 @@ const events = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
+  displayMessage.userMessageCardBuilder();
+
+
+  // eslint-disable-next-line no-undef
+
 };
 
 const init = () => {
