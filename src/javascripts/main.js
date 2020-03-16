@@ -21,11 +21,7 @@ const init = () => {
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
-  displayMessage.userMessageCardBuilder();
-
-
   // eslint-disable-next-line no-undef
-
 };
 
 init();

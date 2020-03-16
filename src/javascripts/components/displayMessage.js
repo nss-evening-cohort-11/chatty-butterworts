@@ -99,9 +99,5 @@ const clearAllMessages = (e) => {
   }
   return users;
 };
-export default {
-  userMessageCardBuilder,
-  deleteMessage,
-  clearAllMessages,
-  newMessageSetter,
-};
+
+export default { userMessageCardBuilder, deleteMessage, clearAllMessages, newMessageSetter, };
