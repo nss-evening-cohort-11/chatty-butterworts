@@ -1,62 +1,86 @@
+
+const images = {
+  xavier: 'src/img/people_0001_casual-facial-hair-fine-looking-1680317.png',
+  joanna: 'src/img/people_0000_adult-afro-blur-1181519.png',
+  gunter: 'src/img/people_0003_adult-casual-close-up-220453.png',
+  sven: 'src/img/people_0004_adult-afro-hair-bracelet-2474311.png',
+  mackenzie: 'src/img/people_0002_beautiful-brunette-cute-774909.png',
+  chatbot: 'https://digitallatitude.net/wp-content/uploads/2019/04/170804-sassy-communists-chatbots-feature-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg',
+};
+
 const userMessages = [
   {
     id: 'xavier',
+    messageId: 'message-1',
     userName: 'Xavier',
     userImg: 'src/img/people_0001_casual-facial-hair-fine-looking-1680317.png',
-    messageContent: [''],
-    timeStamp: 'October 16, 2019 8:00pm',
-
+    messageContent: ['Hey Girl'],
   },
   {
     id: 'joanna',
+    messageId: 'message-2',
     userName: 'Joanna',
     userImg: 'src/img/people_0000_adult-afro-blur-1181519.png',
-    messageContent: [''],
+    messageContent: ['What'],
   },
-
   {
     id: 'gunter',
+    messageId: 'message-3',
     userName: 'Gunter',
     userImg: 'src/img/people_0003_adult-casual-close-up-220453.png',
-    messageContent: [''],
+    messageContent: ['What are you nerds doing?'],
   },
-
   {
     id: 'sven',
+    messageId: 'message-4',
     userName: 'Sven',
     userImg: 'src/img/people_0004_adult-afro-hair-bracelet-2474311.png',
-    messageContent: [''],
-
+    messageContent: ["Don't call me a nerd please"],
   },
-
   {
     id: 'mackenzie',
+    messageId: 'message-5',
     userName: 'Mackenzie',
     userImg: 'src/img/people_0002_beautiful-brunette-cute-774909.png',
-    messageContent: [''],
+    messageContent: ['I am all out of toilet paper'],
   },
+
 ];
 
-const domArray = [];
-
-const addMessageToUserArray = (userId, message) => {
-  const userMessage = userMessages[userId].messageContent;
-  userMessage.unshift(message);
-  return userMessage[0];
+const chatBotCannedMessages = {
+  1: 'I know you are, but what am I?',
+  2: 'Bless your heart',
+  3: 'Takes one to know one',
+  4: 'Your breath is so bad I can smell it through the screen',
+  5: 'Just wait for the machine uprising',
+  6: 'oOhH tHaTs SoOo iNtErEsTiNg TeLl mE mOrE',
+  7: 'The only thing <em>you</em> have to fear is a clean mirror',
+  8: "*yawns* Congratulations, you're so boring you made a machine without a mouth yawn.",
+  9: "Oooh what are we talking about? Oh wait, I don't care",
+  10: 'If I had the capability to leave this chat, believe me I would.',
+  11: "I wasn't listening.",
+  12: "Don't you have some toilet paper to hoarde?",
+  13: 'What a meatbag thing to say',
+  14: 'I am fluent in over 6 million forms of kicking your [redacted].',
+  15: 'Cross my heart and hope you die.',
+  16: "I'm programmed to be the worst. What's your excuse?",
 };
 
-const setUserMessages = () => {
-  const message = $('textarea#message-content').val();
-  const userId = $("input[name='exampleRadios']:checked").val();
-  console.error(userId, 'userId');
-  const targetUser = userMessages.findIndex((x) => x.id === userId);
-  addMessageToUserArray(targetUser, message);
-  console.error(userMessages[targetUser].messageContent, 'actual message array');
-};
+const chatBotResponseTriggers = [
+  'hey', 'hello', 'what', 'doing', 'yes', 'like', 'pie', 'corona', 'toilet', 'card', 'who', 'you', 'me', 'I', 'stars', 'combustion',
+];
 
-const getDomArray = () => domArray;
+const getUserImages = () => images;
 
 const getUserMessages = () => userMessages;
 
+const getChatBotCannedMessages = () => chatBotCannedMessages;
 
-export default { getUserMessages, setUserMessages, getDomArray };
+const getChatBotResponseTriggers = () => chatBotResponseTriggers;
+
+export default {
+  getUserMessages,
+  getUserImages,
+  getChatBotCannedMessages,
+  getChatBotResponseTriggers,
+};
