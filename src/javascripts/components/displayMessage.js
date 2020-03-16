@@ -40,11 +40,8 @@ const dumbChatBot = () => {
   const responses = messageData.getChatBotCannedMessages();
   const randInt = Math.ceil(Math.random() * 16);
   const user = $("input[name='exampleRadios']:checked").val();
-  console.error(user);
   const userId = messages.findIndex((x) => x.id === user);
-  console.error(userId);
   const prevMessage = messages[userId].messageContent[0];
-  console.error(prevMessage);
   const newMessage = {
     id: 'insultbot',
     messageId: `message-${messages.length + 1}`,
@@ -82,11 +79,7 @@ const newMessageSetter = (e) => {
 const deleteMessage = (e) => {
   const messageId = e.target.id;
   const users = messageData.getUserMessages();
-  const targetUser = users.findIndex((x) => x.id === userId);
-  console.error('target user value', targetUser);
-  users.splice(targetUser, 1);
-
-  const targetMessage = users.findIndex((x) => x.id === messageId);
+  const targetMessage = users.findIndex((x) => x.messageId === messageId);
   users.splice(targetMessage, 1);
   userMessageCardBuilder();
 };
