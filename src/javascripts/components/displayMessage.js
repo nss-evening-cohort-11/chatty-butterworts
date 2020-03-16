@@ -2,6 +2,7 @@ import moment from 'moment';
 import utils from '../helpers/utils';
 import messageData from '../helpers/Data/messageData';
 
+
 const userMessageCardBuilder = () => {
   const users = messageData.getUserMessages();
   let domString = '';
@@ -27,32 +28,29 @@ const userMessageCardBuilder = () => {
   utils.printToDom('message-display', domString);
   $('#message-content').val('');
 };
-
 const dumbChatBot = () => {
   const messages = messageData.getUserMessages();
-  // const trigger = messageData.getChatBotResponseTriggers();
+  const trigger = messageData.getChatBotResponseTriggers();
   const images = messageData.getUserImages();
   const responses = messageData.getChatBotCannedMessages();
-  const randInt = Math.ceil(Math.random() * 19);
-  console.error(responses[randInt]);
-  // const targetTrigger = trigger.includes(`"${messages.messageContent}"`);
-  // console.error(targetTrigger);
+  const randInt = Math.ceil(Math.random() * 16);
+  const user = $("input[name='exampleRadios']:checked").val();
+  console.error(user);
+  const userId = messages.findIndex((x) => x.id === user);
+  console.error(userId);
+  const prevMessage = messages[userId].messageContent[0];
+  console.error(prevMessage);
   const newMessage = {
-    id: 'hk-47',
+    id: 'insultbot',
     messageId: `message-${messages.length + 1}`,
-    userName: 'HK-47',
+    userName: 'INSULTBOT',
     userImg: images.chatbot,
     messageContent: [`${responses[randInt]}`],
   };
-  // messages.forEach((message) => {
-  //   message.messageContent.forEach((word) => {
-  //     console.error(word);
-  //     console.error(typeof targetTrigger);
-  //     if (targetTrigger) messages.push(newMessage);
-  //   });
-  // });
-  messages.push(newMessage);
-  userMessageCardBuilder();
+  if (trigger.includes(prevMessage)) {
+    messages.push(newMessage);
+    setTimeout(() => userMessageCardBuilder(), 1500);
+  }
 };
 
 const newMessageSetter = (e) => {
@@ -78,7 +76,6 @@ const newMessageSetter = (e) => {
 
 const deleteMessage = (e) => {
   const messageId = e.target.id;
-  console.error(messageId);
   const users = messageData.getUserMessages();
   const targetMessage = users.findIndex((x) => x.id === messageId);
   users.splice(targetMessage, 1);
