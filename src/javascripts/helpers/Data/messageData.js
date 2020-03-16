@@ -8,7 +8,44 @@ const images = {
   chatbot: 'https://digitallatitude.net/wp-content/uploads/2019/04/170804-sassy-communists-chatbots-feature-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg',
 };
 
-const userMessages = [];
+const userMessages = [
+  {
+    id: 'xavier',
+    messageId: 'message-1',
+    userName: 'Xavier',
+    userImg: 'src/img/people_0001_casual-facial-hair-fine-looking-1680317.png',
+    messageContent: ['Hey Girl'],
+  },
+  {
+    id: 'joanna',
+    messageId: 'message-2',
+    userName: 'Joanna',
+    userImg: 'src/img/people_0000_adult-afro-blur-1181519.png',
+    messageContent: ['What'],
+  },
+  {
+    id: 'gunter',
+    messageId: 'message-3',
+    userName: 'Gunter',
+    userImg: 'src/img/people_0003_adult-casual-close-up-220453.png',
+    messageContent: ['What are you nerds doing?'],
+  },
+  {
+    id: 'sven',
+    messageId: 'message-4',
+    userName: 'Sven',
+    userImg: 'src/img/people_0004_adult-afro-hair-bracelet-2474311.png',
+    messageContent: ["Don't call me a nerd please"],
+  },
+  {
+    id: 'mackenzie',
+    messageId: 'message-5',
+    userName: 'Mackenzie',
+    userImg: 'src/img/people_0002_beautiful-brunette-cute-774909.png',
+    messageContent: ['I am all out of toilet paper'],
+  },
+
+];
 
 const chatBotCannedMessages = {
   1: 'I know you are, but what am I?',

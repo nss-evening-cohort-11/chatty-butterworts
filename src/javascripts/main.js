@@ -5,7 +5,7 @@ import displayMessage from './components/displayMessage';
 import largeText from './components/largeText';
 
 const init = () => {
-  // displayMessage.userMessageCardBuilder();
+  displayMessage.userMessageCardBuilder();
   // messageData.getUserMessages();
   // $(document).ready(() => {
   //   $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
