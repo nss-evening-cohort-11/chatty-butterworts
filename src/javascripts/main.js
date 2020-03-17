@@ -4,11 +4,11 @@ import '../styles/main.scss';
 import displayMessage from './components/displayMessage';
 import darkTheme from './components/darkTheme/darkTheme';
 import largeText from './components/largeText';
+import bot from './components/chatbot';
 
-const init = () => {
-  displayMessage.userMessageCardBuilder();
+const events = () => {
   $(document).ready(() => {
-    $(document).on('click', 'button#dark-mode', darkTheme.myFunction);
+    $(document).on('click', 'button#dark-mode', darkTheme.darkMode);
   });
   $('body').on('click', '.delete-btn', displayMessage.deleteMessage);
   $(document).ready(() => {
@@ -16,10 +16,16 @@ const init = () => {
   });
   $(document).ready(() => {
     $(document).on('click', ':submit', displayMessage.newMessageSetter);
+    $(document).on('click', ':submit', bot.dumbChatBot);
   });
   $(document).ready(() => {
     $(document).on('click', 'button#large-text', largeText.bigText);
   });
+};
+
+const init = () => {
+  displayMessage.userMessageCardBuilder();
+  events();
 };
 
 init();

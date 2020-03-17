@@ -28,27 +28,6 @@ const userMessageCardBuilder = () => {
   utils.printToDom('message-display', domString);
   $('#message-content').val('');
 };
-const dumbChatBot = () => {
-  const messages = messageData.getUserMessages();
-  const trigger = messageData.getChatBotResponseTriggers();
-  const images = messageData.getUserImages();
-  const responses = messageData.getChatBotCannedMessages();
-  const randInt = Math.ceil(Math.random() * 16);
-  const user = $("input[name='exampleRadios']:checked").val();
-  const userId = messages.findIndex((x) => x.id === user);
-  const prevMessage = messages[userId].messageContent[0];
-  const newMessage = {
-    id: 'insultbot',
-    messageId: `message-${messages.length + 1}`,
-    userName: 'INSULTBOT',
-    userImg: images.chatbot,
-    messageContent: [`${responses[randInt]}`],
-  };
-  if (trigger.includes(prevMessage)) {
-    messages.push(newMessage);
-    setTimeout(() => userMessageCardBuilder(), 1500);
-  }
-};
 
 const newMessageSetter = (e) => {
   e.preventDefault();
@@ -68,7 +47,6 @@ const newMessageSetter = (e) => {
   }
   $('#form-check').removeClass('.was-validated');
   $('#collapseOne').removeClass('show');
-  dumbChatBot();
 };
 
 const deleteMessage = (e) => {
@@ -93,5 +71,4 @@ export default {
   deleteMessage,
   clearAllMessages,
   newMessageSetter,
-  dumbChatBot,
 };
